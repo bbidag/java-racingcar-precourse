@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class RacingApplication {
 
     public static void main(String[] args){
-
+        Cars cars = Cars.of(initRacingCarNames());
+        RacingField racingField = initNumberOfProgress();
+        printGameResult(racingField, cars);
     }
 
     public static String initRacingCarNames(){
@@ -21,7 +23,9 @@ public class RacingApplication {
         return new RacingField(totalCount);
     }
 
-    public static void printGameResult(){
+    public static void printGameResult(RacingField racingField, Cars cars){
+        System.out.println("실행 결과");
+        racingField.playGame(cars);
     }
 
 }

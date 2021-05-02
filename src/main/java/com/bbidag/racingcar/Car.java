@@ -22,4 +22,7 @@ public class Car {
         return position.getLength();
     }
 
+    public String getPosition() {
+        return position.getPosition();
+    }
 }

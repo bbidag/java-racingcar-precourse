@@ -31,6 +31,10 @@ public class Cars {
         }
     }
 
+    public Iterable<Car> getCars(){
+        return this.cars;
+    }
+
     public int size() {
         return cars.size();
     }
