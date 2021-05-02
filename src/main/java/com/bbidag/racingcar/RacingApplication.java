@@ -1,5 +1,6 @@
 package com.bbidag.racingcar;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class RacingApplication {
@@ -26,6 +27,8 @@ public class RacingApplication {
     public static void printGameResult(RacingField racingField, Cars cars){
         System.out.println("실행 결과");
         racingField.playGame(cars);
+        List<String> winPlayers = cars.getWinPlayers();
+        System.out.println(String.join(",", winPlayers) + "가 최종 우승했습니다.");
     }
 
 }

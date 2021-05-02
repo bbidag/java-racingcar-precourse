@@ -31,6 +31,28 @@ public class Cars {
         }
     }
 
+    public List<String> getWinPlayers(){
+        List<String> winPlayers = new ArrayList<>();
+        int maxDistance = 0;
+        for(Car car : cars){
+            maxDistance = getMaxDistance(car, maxDistance);
+        }
+        for(Car car : cars){
+            addWinPlayerIfMaxDistance(winPlayers, car, maxDistance);
+        }
+        return winPlayers;
+    }
+
+    int getMaxDistance(Car car, int maxDistance){
+        return car.getPositionLength() < maxDistance ? maxDistance : car.getPositionLength();
+    }
+
+    void addWinPlayerIfMaxDistance(List<String> winPlayers, Car car, int maxDistance){
+        if(car.getPositionLength() == maxDistance){
+            winPlayers.add(car.getName());
+        }
+    }
+
     public Iterable<Car> getCars(){
         return this.cars;
     }
