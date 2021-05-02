@@ -2,6 +2,7 @@ package com.bbidag.racingcar;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Cars {
 
@@ -21,6 +22,13 @@ public class Cars {
         }
 
         return new Cars(cars);
+    }
+
+    public void moveEachCarByRandom(){
+        Random random = new Random();
+        for(Car car : cars){
+            car.addDistanceIfCorrectNumber(random.nextInt(10));
+        }
     }
 
     public int size() {

@@ -8,7 +8,7 @@ public class RacingFieldTest {
 
     @Test
     public void getNumberOfProgress(){
-        assertThat(new RacingField(5).getNumberOfProgress()).isEqualTo(5);
+        assertThat(new RacingField(5).getNumberOfRound()).isEqualTo(5);
     }
 
 }
