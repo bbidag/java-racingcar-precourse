@@ -5,7 +5,7 @@ public class CarPosition {
     private StringBuilder position;
 
     public CarPosition(){
-        this.position = new StringBuilder();
+        this.position = new StringBuilder("-");
     }
 
     public void addDistanceIfCorrectNumber(int number){
