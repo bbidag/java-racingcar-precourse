@@ -1,7 +1,5 @@
 package com.bbidag.racingcar;
 
-import java.util.Random;
-
 public class RacingField {
 
     private final int numberOfRound;

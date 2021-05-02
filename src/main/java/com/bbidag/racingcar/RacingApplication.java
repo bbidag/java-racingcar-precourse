@@ -7,7 +7,7 @@ public class RacingApplication {
 
     public static void main(String[] args){
         Cars cars = Cars.of(initRacingCarNames());
-        RacingField racingField = initNumberOfProgress();
+        RacingField racingField = initNumberOfRound();
         printGameResult(racingField, cars);
     }
 
@@ -17,7 +17,7 @@ public class RacingApplication {
         return scan.nextLine();
     }
 
-    public static RacingField initNumberOfProgress(){
+    public static RacingField initNumberOfRound(){
         System.out.println("시도할 회수는 몇회인가요?");
         Scanner scan = new Scanner(System.in);
         int totalCount = Integer.parseInt(scan.nextLine());
