@@ -2,7 +2,7 @@ package com.bbidag.racingcar;
 
 public class CarName {
 
-    private String name;
+    private final String name;
 
     public CarName(String name){
         if(name == null) {

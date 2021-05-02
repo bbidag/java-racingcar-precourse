@@ -14,4 +14,14 @@ public class RacingApplication {
         return scan.nextLine();
     }
 
+    public static RacingField initNumberOfProgress(){
+        System.out.println("시도할 회수는 몇회인가요?");
+        Scanner scan = new Scanner(System.in);
+        int totalCount = Integer.parseInt(scan.nextLine());
+        return new RacingField(totalCount);
+    }
+
+    public static void printGameResult(){
+    }
+
 }
